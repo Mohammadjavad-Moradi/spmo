@@ -8,7 +8,6 @@ export const CardContainer = styled(Card)`
     width: 250px;
     margin-top: 20px;
     height: 370px;
-
 `;
 
 export const CardMediaContainer = styled(CardMedia)`

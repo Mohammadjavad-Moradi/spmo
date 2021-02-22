@@ -150,7 +150,7 @@ const PayamBank = () => {
                         <PayamSlides key={index}>
                             {
                                 item.map((card, id) => (
-                                    <CustomCard content={card} key={id}/>
+                                    <CustomCard content={card} key={id} delaykey={id} flipdirection={index}/>
                                 ))
                             }
                         </PayamSlides>
