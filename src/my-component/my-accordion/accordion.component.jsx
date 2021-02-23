@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './accordion.module.scss';
 
-import LinkCreator from '../../components/link-creator/link-creator.component';
+import LinkCreator from '../link-creator/link-creator.component';
 
 class Accordion extends React.Component {
     state = {

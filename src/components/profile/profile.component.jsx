@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import CustomButton from '../custom-button/custom-button.component';
 
@@ -36,4 +37,8 @@ const Profile = ({ currentUser }) => {
     )
 };
 
-export default Profile;
+const mapStateToProps = state => ({
+    currentUser: state.user.currentUser
+})
+
+export default connect(mapStateToProps)(Profile);

@@ -191,7 +191,7 @@ export default function HorizontalTabs() {
                 >
                     {
                         news.map((item, index) => (
-                            <Tab label={item.title} {...a11yProps(index)} />
+                            <Tab label={item.title} key={index} {...a11yProps(index)} />
                         ))
                     }
                 </Tabs>

@@ -14,10 +14,7 @@ import BankNews from '../../components/news-box/news-box.component';
 
 const HomePage = () => {
     const theme = useTheme();
-    const matchesMd = useMediaQuery(theme.breakpoints.down('md'));
-    const matchesSm = useMediaQuery(theme.breakpoints.down('sm'));
     const matchesXs = useMediaQuery(theme.breakpoints.down('xs'));
-
 
     return (
         <HomePageContainer>

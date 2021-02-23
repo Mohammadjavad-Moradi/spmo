@@ -1,5 +1,5 @@
 import React from 'react';
-import Accordion from '../../my-component/my-accordion/accordion.component';
+import Accordion from '../my-accordion/accordion.component';
 
 import styles from './quick-access-links-container.module.scss';
 

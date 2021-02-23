@@ -8,7 +8,7 @@ import CustomCard from '../custom-card/custom-card.component';
 import { PayamBankContainer, PayamSlides, SlideTitle, SlideTitleConteiner } from './payam-bank.styles';
 
 const PayamBank = () => {
-    const [payamBankContent, setPayamBankContent] = React.useState(
+    const [payamBankContent] = React.useState(
         [
             {
                 title: '	مراسم معارفه فرمانده پایگاه مقاومت بسیج بانک مرکزی+عکس',

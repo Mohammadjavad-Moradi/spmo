@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { SlideItem, SlideshowContainer, SlideTitle, SlideTitleConteiner, CarouselContainer, GridItemTitle, GridItem } from './slideshow-news.styles';
 
 const SlideShow = () => {
-    const [slides, setSlides] = useState({
+    const [slides] = useState({
         indexCounter: 0,
         title: 'اعلانات ویژه',
         linkUrl: 'elanatvije',

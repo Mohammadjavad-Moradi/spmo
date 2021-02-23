@@ -16,7 +16,7 @@ import { NewsContainer,
     NewsBox } from './news-box.styles';
 
 const BankNews = () => {
-    const [bankNews, setBankNews] = useState([
+    const [bankNews] = useState([
         {
             title: 'نظام بانکی علیرغم محدودیت در منابع حمایت ویژه ای از فضای کسب و کار داشته است',
             linkUrl: '',

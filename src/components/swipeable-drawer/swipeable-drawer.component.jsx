@@ -137,7 +137,7 @@ export default function SwipeableTemporaryDrawer({ items, quickLinks }) {
   );
 
   const thirdList = (items) => (
-    items.map((item, index) => (
+    items.map((item) => (
       item.tabContent.map((tabContentItem, id) => (
         tabContentItem.nestedEl ?
           <ThirdList

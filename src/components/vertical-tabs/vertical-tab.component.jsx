@@ -5,7 +5,13 @@ import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
-import { TabsContainer, VerticalTabsContainer, TabPanelContainer, LinkContainer, TitleContainer, TabContainer } from './vertical-tabs.styles';
+import { TabsContainer, 
+  VerticalTabsContainer, 
+  TabPanelContainer, 
+  LinkContainer, 
+  TitleContainer, 
+  TabContainer 
+} from './vertical-tabs.styles';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -44,8 +50,8 @@ function a11yProps(index) {
 
 
 export default function VerticalTabs() {
-  const [value, setValue] = React.useState(0);
-  const [news, setNews] = useState([
+  const [value, setValue] = useState(0);
+  const [news] = useState([
     {
       title: 'اعلانات اداری',
       content: [
@@ -177,7 +183,6 @@ export default function VerticalTabs() {
           value={value}
           onChange={handleChange}
           aria-label="Vertical tabs example"
-          textColor="primary"
         >
           {
             news.map((item, index) => (
@@ -186,10 +191,10 @@ export default function VerticalTabs() {
           }
         </TabsContainer>
         {
-          news.map((item, index) => (
-            <TabPanel value={value} index={index} key={index}>
-              {item.content.map((content, index) => (
-                <LinkContainer key={index} to={content.linkUrl}>{content.contentTitle}</LinkContainer>
+          news.map((item, inde) => (
+            <TabPanel value={value} index={inde} key={inde}>
+              {item.content.map((content, id) => (
+                <LinkContainer key={id} to={content.linkUrl}>{content.contentTitle}</LinkContainer>
               ))}
             </TabPanel>
           ))

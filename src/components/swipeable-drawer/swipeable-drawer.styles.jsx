@@ -31,7 +31,8 @@ export const ListContainer = styled.div`
     display: flex;
     flex-flow: row-reverse;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 `;
 
 export const BackButton = styled.div`

@@ -17,25 +17,29 @@ export const TitleContainer = styled.div`
     }
 `;
 
-export const TabContainer = styled(Tab)`
-    font-weight: bold !important;
-`;
-
 export const VerticalTabsContainer = styled.div`
     display: flex;
     flex-grow: 1;
     flex-direction: row-reverse;
 `;
 
-export const TabsContainer = styled(({ ...props }) => <Tabs orientation="vertical" variant="scrollable" indicatorColor='primary' {...props} />)`
+export const TabsContainer = styled(({ ...props }) => <Tabs orientation="vertical" variant="scrollable" indicatorColor='primary' textColor="primary" {...props} />)`
     display: flex;
     flex-direction: row-reverse;
     border-left: 1px solid ${props => props.theme.palette.divider};
     height: 300px;
+    width: 20%;
 `;
 
-export const TabPanelContainer =  styled(({ ...props }) => <Tabs orientation="vertical" variant="scrollable" indicatorColor='primary' {...props} />)`
+export const TabContainer = styled(Tab)`
+    font-weight: bold !important;
+    min-width: 100% !important;
+`;
+
+export const TabPanelContainer =  styled.div`
     height: 300px;
+    overflow-y: auto;
+    width: 80%;
 
 `;
 
