@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { ReactComponent as Logo } from '../../assets/cbi.svg';
+import { ReactComponent as Logo } from '../../assets/cbi-logo.svg';
+import headerImage from '../../assets/header.png';
 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -9,12 +10,15 @@ import Tabs from '@material-ui/core/Tabs';
 export const HeaderBar = styled.div`
     width: 100%;
     height: 7em;
-    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, ${props => props.theme.palette.primary.light} 18%);
+    background: url(${headerImage}) no-repeat top right;
+    background-size: cover;
 `;
 
+
 export const LogoContainer = styled(Logo)`
-    width: 7em;
-    height: 7em;
+    width: 5em;
+    height: 5em;
+    padding: 1em 1em;
 `;
 
 export const AppBarContainer = styled(({...props}) => <AppBar color='primary' position='static' {...props} />)`

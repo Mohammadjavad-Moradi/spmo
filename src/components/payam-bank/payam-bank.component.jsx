@@ -1,5 +1,8 @@
 import React from  'react';
 
+
+
+
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
 
@@ -121,6 +124,7 @@ const PayamBank = () => {
     const theme = useTheme();
     const matchesMd = useMediaQuery(theme.breakpoints.down('md'));
     const matchesXs = useMediaQuery(theme.breakpoints.down('xs'));
+
 
     let count = 3;
     if (matchesMd) { count = 2 };

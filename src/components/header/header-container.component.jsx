@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
 
-import { HeaderBar, 
+import { HeaderBar,
+    Title, 
     LogoContainer, 
     AppBarContainer, 
     ToolBarContainer, 
