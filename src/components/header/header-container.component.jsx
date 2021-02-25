@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+import { createStructuredSelector } from 'reselect';
+import { selectQuickLinks } from '../../redux/header/header.selectors';
 
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
 
 import { HeaderBar,
-    Title, 
     LogoContainer, 
     AppBarContainer, 
     ToolBarContainer, 
@@ -17,9 +20,7 @@ import { HeaderBar,
 import Profile from '../profile/profile.component';
 import SwipeableTemporaryDrawer from '../swipeable-drawer/swipeable-drawer.component';
 
-import { quickLinksData, tabItemsData } from './tab-data';
-
-const HeaderContainer = () => {
+const HeaderContainer = ({ quickLinks }) => {
     
     const theme = useTheme();
     const matchesMd = useMediaQuery(theme.breakpoints.down('md'));
@@ -27,8 +28,6 @@ const HeaderContainer = () => {
     const matchesXs = useMediaQuery(theme.breakpoints.down('xs'));
     
     const [value, setValue] = useState(0);
-    const [quickLinks] = useState(quickLinksData);
-    const [tabItems] = useState(tabItemsData);
 
     useEffect(() => {
         quickLinks.content.map((item, index) => {
@@ -38,7 +37,7 @@ const HeaderContainer = () => {
                     setValue(0);
                 }
             }) 
-    },[])
+    },[quickLinks])
 
     const handleChange = (event, value) => {
         setValue(value);
@@ -53,7 +52,7 @@ const HeaderContainer = () => {
             </ProfileAndSearch> 
 
             <TabsContainer value={value} onChange={handleChange}>
-                <SwipeableTemporaryDrawer items={tabItems} quickLinks={quickLinks}/>
+                <SwipeableTemporaryDrawer/>
                 {
                     matchesSm ?
                     null
@@ -85,4 +84,8 @@ const HeaderContainer = () => {
     )
 }
 
-export default HeaderContainer;
+const mapStateToProps = createStructuredSelector({
+    quickLinks: selectQuickLinks
+})
+
+export default connect(mapStateToProps)(HeaderContainer);

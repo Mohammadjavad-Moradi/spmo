@@ -31,8 +31,9 @@ export const ListContainer = styled.div`
     display: flex;
     flex-flow: row-reverse;
     position: relative;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 100%;
 `;
 
 export const BackButton = styled.div`
@@ -74,7 +75,7 @@ const openSecondDrawer = (props) => {
 
 export const SecondList = styled(({...props}) => <List {...props} />)`
     position: absolute !important;
-    width: ${props => props.open && props.indexvalue === props.value ? '250px' : '250px'} !important;
+    width: ${props => props.open && props.indexvalue === props.value ? '240px' : '240px'} !important;
     //min-width: ${props => props.open && props.indexvalue === props.value ? '250px' : '250px'} !important;
     visibility: ${props => props.open && props.indexvalue === props.value ? 'visible' : 'hidden' };
     right: ${props => openDrawers(props)};
@@ -86,7 +87,7 @@ export const SecondList = styled(({...props}) => <List {...props} />)`
 `;
 
 export const ThirdList = styled(({...props}) => <List {...props} />)`
-    min-width: 250px;
+    min-width: 240px;
     position: absolute !important;
     right: ${props => openSecondDrawer(props)};  
     transition: all ease .6s;

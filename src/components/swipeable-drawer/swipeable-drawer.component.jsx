@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+
+import { createStructuredSelector } from 'reselect';
+import { selectQuickLinks, selectTabItems } from '../../redux/header/header.selectors';
 
 import CustomAccordion from '../custom-accordion/custom-accordion.component';
 
@@ -23,6 +27,7 @@ import {
   LinkDrawer
 } from './swipeable-drawer.styles';
 
+
 const useStyles = makeStyles({
   list: {
     width: 250,
@@ -32,7 +37,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function SwipeableTemporaryDrawer({ items, quickLinks }) {
+const SwipeableTemporaryDrawer = ({ items, quickLinks }) => {
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
   const classes = useStyles();
@@ -232,3 +237,10 @@ export default function SwipeableTemporaryDrawer({ items, quickLinks }) {
     </div>
   );
 }
+
+const mapStateToProps = createStructuredSelector({
+  quickLinks: selectQuickLinks,
+  items: selectTabItems
+})
+
+export default connect(mapStateToProps)(SwipeableTemporaryDrawer);
