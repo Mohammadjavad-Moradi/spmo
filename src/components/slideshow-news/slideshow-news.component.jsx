@@ -1,18 +1,29 @@
 import React, { useState } from 'react';
 
-import { SlideItem, SlideshowContainer, SlideTitle, SlideTitleConteiner, CarouselContainer, GridItemTitle, GridItem } from './slideshow-news.styles';
+import { SlideItem, 
+    SlideshowContainer, 
+    CarouselContainer, 
+    GridItemTitle, 
+    GridItem } from './slideshow-news.styles';
+
+import TitleContainer from '../title-container/title-container.component';
 
 const SlideShow = () => {
     const [slides] = useState({
         indexCounter: 0,
         title: 'اعلانات ویژه',
-        linkUrl: 'elanatvije',
+        linkUrl: '/officialannouncement',
         contents: [
             {
                 name: 'آگهي دعوت به همکاري',
                 content: `اداره حراست بانک‌ها و موسسات پولی غیربانکی به منظور تکميل نيروي انساني خود از ميان همکاران واجد شرایط (به استثنای کارکنان واحدهای تولیدی و مسلط به مهارت‌های هفت گانه ICDL و کلیه امور مربوط به اتوماسیون اداری و امور دفتری)، با مدرک تحصیلی دیپلم یا کاردانی و  کارشناسی جهت تصدي سمت "مسئول امور دفتری" دعوت به همکاري مي‌نمايد.
                 متقاضيان محترم مي‌توانند جهت کسب اطلاعات بيشتر با شماره تلفن‌ 29952580 تماس حاصل نموده و در صورت تمایل درخواست های خود را به دفتر آن اداره ارسال دارند.`,
-                date: '1399/11/26'
+                date: '1399/11/26',
+                images: [
+                    
+                ],
+                viewCounter: 0,
+
             },
             {
                 name: `گزارش سمینار آموزشی " آشنایی با تغییرات و الزامات جدید قانون اصلاح قانون صدور چک"`,
@@ -49,9 +60,7 @@ const SlideShow = () => {
 
     return (
         <SlideshowContainer>
-            <SlideTitleConteiner>
-                <SlideTitle to={slides.linkUrl}>{ slides.title }</SlideTitle>
-            </SlideTitleConteiner>
+            <TitleContainer name={slides.title} linkUrl={slides.linkUrl} color='grey'/>
             {   
                 <CarouselContainer interval='4000' animation='slide'>
                     {slides.contents.slice(0, 4).map((item, index) => (

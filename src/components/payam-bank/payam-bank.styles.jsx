@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 import cbi from '../../assets/payam-bank.png';
 
@@ -31,26 +30,4 @@ export const PayamSlides = styled(({...props}) => <Paper elevation={0} {...props
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-`;
-
-export const SlideTitleConteiner = styled.div`
-    width: 100%;
-    background-color: ${props => props.theme.palette.primary.main};
-    color: ${props => props.theme.palette.common.white};
-    line-height: 3em;
-    text-align: right;
-`;
-
-export const SlideTitle = styled(Link)`
-    font-weight: bold;
-    padding-right: 1em;
-    text-decoration: none;
-    color: inherit;
-    &:visited {
-        text-decoration: none;
-        color: inherit;
-    }
-    &:hover {
-        color: ${props => props.theme.palette.button.main};
-    }
 `;

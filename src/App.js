@@ -9,7 +9,7 @@ import { ThemeProvider as MaterialThemeProvider } from '@material-ui/core/styles
 import { ThemeProvider as StyledThemeProvider } from 'styled-components';
 import { theme } from './theme';
 
-import NewsPage from './pages/news/news.component';
+import OfficialAnnouncement from './pages/official-announcment/official-announcement.component';
 import HeaderContainer from './components/header/header-container.component';
 import HomePage from './pages/homepage/homepage.component';
 import SignInPage from './pages/sign-in-page/sign-in-page.component';
@@ -52,7 +52,8 @@ function App ({ currentUser, setCurrentUser }) {
           <PageContainer>
             <Switch>
               <Route exact path='/' component={HomePage} />
-              <Route path='/news' component={NewsPage} />
+              {/* <Route path='/news' component={NewsPage} /> */}
+              <Route exact path='/officialannouncement' component={OfficialAnnouncement} />
               <Route exact path='/signin' render={() => currentUser ? (<Redirect to='/' />) : (<SignInPage/>) } />
             </Switch>
           </PageContainer>

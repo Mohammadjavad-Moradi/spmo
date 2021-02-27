@@ -1,14 +1,12 @@
 import React from  'react';
 
-
-
-
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
 
 import CustomCard from '../custom-card/custom-card.component';
+import TitleContainer from '../title-container/title-container.component';
 
-import { PayamBankContainer, PayamSlides, SlideTitle, SlideTitleConteiner } from './payam-bank.styles';
+import { PayamBankContainer, PayamSlides } from './payam-bank.styles';
 
 const PayamBank = () => {
     const [payamBankContent] = React.useState(
@@ -145,9 +143,7 @@ const PayamBank = () => {
 
     return (
         <React.Fragment>
-            <SlideTitleConteiner>
-                <SlideTitle to='/payamBank'>پیام بانک</SlideTitle>
-            </SlideTitleConteiner>
+            <TitleContainer name='پیام بانک' linkUrl='/payambank' color='blue' />
             <PayamBankContainer>
                 {
                     organizedContent.map((item, index) => (

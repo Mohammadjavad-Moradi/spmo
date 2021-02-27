@@ -3,16 +3,16 @@ import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import TitleContainer from '../title-container/title-container.component';
+
 import { NewsContainer,
     CardContainer,
     CardMediaContainer, 
     CardActionAreaContainer, 
     CardContentContainer,
-    TitleContainer,
     Content,
+    Titles,
     DateContent,
-    SectionTitleContainer,
-    SectionTitle,
     NewsBox } from './news-box.styles';
 
 const BankNews = () => {
@@ -66,9 +66,7 @@ const BankNews = () => {
     },[])
     return (
         <NewsContainer>
-            <SectionTitleContainer>
-                <SectionTitle to='/akhbarbank'>اخبار بانک</SectionTitle>
-            </SectionTitleContainer>
+            <TitleContainer name='اخبار بانک' linkUrl='/akhbarbank' color='grey'/>
             <NewsBox>
                 {
                     bankNews.map((news, index) => (
@@ -79,7 +77,7 @@ const BankNews = () => {
                                 title={news.alt}
                                 />
                                 <CardContentContainer>
-                                    <TitleContainer>{news.title}</TitleContainer>
+                                    <Titles>{news.title}</Titles>
                                     <Content>{news.content}</Content>
                                     <DateContent>{news.date}</DateContent>
                                 </CardContentContainer>

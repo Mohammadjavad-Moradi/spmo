@@ -4,19 +4,6 @@ import { Link } from 'react-router-dom';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
-export const TitleContainer = styled.div`
-    width: 100%;
-    background-color: ${props => props.theme.palette.secondary.main};
-    color: ${props => props.theme.palette.common.white};
-    font-weight: bold;
-    text-align: right;
-    line-height: 3em;
-    cursor: default;
-    span {
-        padding: 1em;
-    }
-`;
-
 export const VerticalTabsContainer = styled.div`
     display: flex;
     flex-grow: 1;

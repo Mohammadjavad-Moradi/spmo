@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
+import TitleContainer from '../title-container/title-container.component';
 import { TabsContainer, 
   VerticalTabsContainer, 
   TabPanelContainer, 
-  LinkContainer, 
-  TitleContainer, 
+  LinkContainer,  
   TabContainer 
 } from './vertical-tabs.styles';
 
@@ -175,9 +175,7 @@ export default function VerticalTabs() {
 
   return (
     <React.Fragment>
-      <TitleContainer>
-        <span>اعلانات</span>
-      </TitleContainer>
+      <TitleContainer name='اعلانات' color='grey' />
       <VerticalTabsContainer>
         <TabsContainer
           value={value}

@@ -11,28 +11,6 @@ export const SlideshowContainer = styled(({ ...props }) => <Grid container direc
   padding: 0;
 `;
 
-export const SlideTitle = styled(Link)`
-font-weight: bold;
-  padding-right: 1em;
-  text-decoration: none;
-  color: inherit;
-  &:visited {
-      text-decoration: none;
-      color: inherit;
-  }
-  &:hover {
-        color: ${props => props.theme.palette.button.main};
-    }
-`;
-
-export const SlideTitleConteiner = styled.div`
-  width: 100%;
-  background-color: ${props => props.theme.palette.secondary.main};
-  color: ${props => props.theme.palette.common.white};
-  line-height: 3em;
-  text-align: right;
-`;
-
 export const CarouselContainer = styled(({ ...props }) => <Carousel interval='4000' animation='slide' {...props} />)`
   
 `;

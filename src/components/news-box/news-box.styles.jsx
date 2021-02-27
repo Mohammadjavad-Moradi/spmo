@@ -13,28 +13,6 @@ export const NewsContainer = styled.div`
     background-color: ${props => props.theme.palette.grey[400]};
 `;
 
-export const SectionTitleContainer = styled.div`
-    width: 100%;
-    line-height: 3em;
-    text-align: right;
-    background-color: ${props => props.theme.palette.secondary.main};
-    color: ${props => props.theme.palette.common.white};
-`;
-
-export const SectionTitle = styled(Link)`
-    font-weight: bold;
-    padding-right: 1em;
-    text-decoration: none;
-    color: inherit;
-    &:visited {
-        text-decoration: none;
-        color: inherit;
-    }
-    &:hover {
-        color: ${props => props.theme.palette.button.main};
-    }
-`;
-
 export const NewsBox = styled(Box)`
     margin: 20px auto;
     width: 90%;
@@ -72,7 +50,7 @@ export const CardContentContainer = styled(CardContent)`
     text-align: right;
 `;
 
-export const TitleContainer = styled.div`
+export const Titles = styled.div`
     font-weight: bold;
     font-size: 1.1em;
     padding: .5em;
