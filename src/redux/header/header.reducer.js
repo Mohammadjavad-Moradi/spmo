@@ -45,7 +45,7 @@ const INITIAL_STATE = {
                 },
                 {
                     name: 'اعلانات اداری',
-                    linkUrl: '/edari'
+                    linkUrl: '/officialannouncement'
                 },
                 {
                     name: 'اعلانات مناسبتی',

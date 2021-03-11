@@ -28,6 +28,17 @@ export const TabPanelContainer =  styled.div`
     overflow-y: auto;
     width: 80%;
 
+    @keyframes fadein {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    animation: 1s ease-in 0s fadein;
 `;
 
 export const LinkContainer = styled(Link)`
