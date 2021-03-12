@@ -6,7 +6,28 @@ import Select from '@material-ui/core/Select';
 
 export const PageContainer = styled(({...props}) => <div {...props}/>)`
     width: 100%;
+    
+
+   
+`;
+
+export const Wrapper = styled.div`
     overflow: hidden;
+`;
+
+export const FullListWrapper = styled.div`
+     @keyframes moveInTop {
+        0% {
+            transform: translateY(-200%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0%);
+            opacity: 1;
+        }
+    }
+
+    animation: 1s ease-out 0s moveInTop ;
 `;
 
 export const ItemContainer = styled(({...props}) => <Grid {...props} container direction="row-reverse" justify="space-between"/>)`
@@ -30,18 +51,7 @@ export const ListItem = styled(({...props}) => <Grid {...props} item />)`
         color: ${props => props.theme.palette.button.main};
     }
 
-    @keyframes moveInTop {
-        0% {
-            transform: translateY(-200%);
-            opacity: 0;
-        }
-        100% {
-            transform: translateY(0%);
-            opacity: 1;
-        }
-    }
-
-    animation: 1s ease-out 0s moveInTop;
+    
 `;
 
 export const PageIndicator = styled(({...props}) => <Pagination count={10} color='primary' showFirstButton showLastButton {...props} />)`

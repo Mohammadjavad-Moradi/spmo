@@ -15,8 +15,22 @@ export const bankNews = {
             احتراماً، خواهشمند است دستور فرمایید حداکثر تا پایان وقت اداری 14‏/12‏/1399 نسبت به ارسال مدارک تسویه تنخواه‌گردان پذیرایی سال 1399  پس از تأیید مدیرکل حوزه
             
              مربوطه به اداره تدارکات اقدام کنند.`,
-            imageUrl: '/assets/payamBankBasij.jpg',
-            images: ['/assets/payamBankBasij.jpg','',''],
+            imageUrl: '/assets/_MG_2120-Pano.jpg',
+            images: [
+                        {
+                            imageUrl: '/assets/payamBankBasij.jpg',
+                            alt: 'other images 1'
+                        },{
+                            imageUrl: '/assets/18129912.jpg',
+                            alt: 'other images 2'
+                        },{
+                            imageUrl: '/assets/18129916.jpg',
+                            alt: 'other images 3'
+                        },{
+                            imageUrl: '/assets/18129917.jpg',
+                            alt: 'other images 4'
+                        },
+                    ],
             view: 0
         },
         2: {
@@ -27,9 +41,9 @@ export const bankNews = {
             اداره روابط عمومی`,
             date: '1399/12/09',
             summary: 'سالروز وفات حضرت زینب کبری سلام الله علیها بر عموم شیعیان تسلیت باد',
-            imageUrl: '/assets/payamBankBasij.jpg',
+            imageUrl: '/assets/18129917.jpg',
             view: 0,
-            images: ['','','']
+            images: []
         },
         3: {
             id: 3,
@@ -41,9 +55,9 @@ export const bankNews = {
             `,
             date: '1399/12/06',
             summary: 'فرا رسیدن 13رجب، سالروز ولادت مولی الموحدین، امیرالمومنین،  مولود کعبه  حضرت علی(ع) و روز پدربر عاشقان آن ',
-            imageUrl: '/assets/payamBankBasij.jpg',
+            imageUrl: '/assets/18129916.jpg',
             view: 0,
-            images: ['','','']
+            images: []
         },
         4: {
             id: 4,
@@ -61,7 +75,13 @@ export const bankNews = {
              اداره آموزش و مطالعات نیروی انسانی`,
             date: ' 1399/12/02',
             summary: 'راه دور تقویم زمستان ۹۹ که در دوره های آموزشی',
-            imageUrl: '/assets/payamBankBasij.jpg',
+            imageUrl: '/assets/18129912.jpg',
+            images: [
+                {
+                    imageUrl: '/assets/payamBankBasij.jpg',
+                    alt: 'other images 1'
+                }
+            ],
             view: 0
         },
         5: {
@@ -70,7 +90,16 @@ export const bankNews = {
             content: `به ‌اطلاع کليه ادارات مستقر در ساختمان ميرداماد مي‌رساند، به علت انجام تعميرات، گاز مجموعه روز سه شنبه مورخ 05‏‏/12‏‏/99 از ساعت 9 الی 18 قطع خواهد شد `,
             date: '1399/12/05',
             summary: 'ساند، به علت انجام تعميرات، گاز مجموعه',
-            imageUrl: '/assets/payamBankBasij.jpg',
+            imageUrl: '/assets/18129917.jpg',
+            images: [
+                {
+                    imageUrl: '/assets/payamBankBasij.jpg',
+                    alt: 'other images 1'
+                },{
+                    imageUrl: '/assets/18129917.jpg',
+                    alt: 'other images 2'
+                }
+            ],
             view: 0
         },
         6: {
@@ -83,7 +112,8 @@ export const bankNews = {
             برای آشنایی بیشتر با `,
             date: '1399/11/29',
             summary: 'برای آشنایی بیشتر با این واقعه، شما را به دیدن این کلیپ تصویری دعوت می‌کنی',
-            imageUrl: '/assets/payamBankBasij.jpg',
+            imageUrl: '',
+            images: [],
             view: 0
         },
         7: {
@@ -100,7 +130,8 @@ export const bankNews = {
             امور ایثارگران بانک مرکزی`,
             date: '1399/11/29',
             summary: 'روز کشته شدگان ماجرای ۱۹ دی قم، دست ب',
-            imageUrl: '/assets/payamBankBasij.jpg',
+            imageUrl: '',
+            images: [],
             view: 0
         },
         8: {
@@ -137,7 +168,8 @@ export const bankNews = {
             اداره آموزش و مطالعات نیروی انسانی`,
             date: '1399/11/27',
             summary: 'به اطلاع کارکنانی که تاکنون موفق به شرکت در آز',
-            imageUrl: '/assets/payamBankBasij.jpg',
+            imageUrl: '',
+            images: [],
             view: 0
         },
         9: {
@@ -150,6 +182,7 @@ export const bankNews = {
             date: ' 1399/11/26',
             summary: '29952580 تماس حاصل نموده و در صورت تمایل درخواست های خود را به دفتر',
             imageUrl: '/assets/payamBankBasij.jpg',
+            images: [],
             view: 0
         },
         10: {
@@ -168,7 +201,7 @@ export const bankNews = {
             
              مربوطه به اداره تدارکات اقدام کنند.`,
             imageUrl: '/assets/payamBankBasij.jpg',
-            images: ['/assets/payamBankBasij.jpg','',''],
+            images: [],
             view: 0
         },
         11: {
@@ -181,7 +214,7 @@ export const bankNews = {
             summary: '',
             imageUrl: '/assets/payamBankBasij.jpg',
             view: 0,
-            images: ['','','']
+            images: []
         },
         12: {
             id: 12,
@@ -195,7 +228,7 @@ export const bankNews = {
             summary: '',
             imageUrl: '/assets/payamBankBasij.jpg',
             view: 0,
-            images: ['','','']
+            images: []
         },
         13: {
             id: 13,
@@ -214,6 +247,7 @@ export const bankNews = {
             date: ' 1399/12/02',
             summary: '',
             imageUrl: '/assets/payamBankBasij.jpg',
+            images: [],
             view: 0
         },
         14: {
@@ -223,6 +257,7 @@ export const bankNews = {
             date: '1399/12/05',
             summary: '',
             imageUrl: '/assets/payamBankBasij.jpg',
+            images: [],
             view: 0
         },
         15: {
@@ -236,6 +271,7 @@ export const bankNews = {
             date: '1399/11/29',
             summary: 'برای آشنایی بیشتر با این واقعه، شما را به دیدن این کلیپ تصویری دعوت می‌کنی',
             imageUrl: '/assets/payamBankBasij.jpg',
+            images: [],
             view: 0
         },
         16: {
@@ -253,6 +289,7 @@ export const bankNews = {
             date: '1399/11/29',
             summary: '',
             imageUrl: '/assets/payamBankBasij.jpg',
+            images: [],
             view: 0
         },
         17: {
@@ -290,6 +327,7 @@ export const bankNews = {
             date: '1399/11/27',
             summary: '',
             imageUrl: '/assets/payamBankBasij.jpg',
+            images: [],
             view: 0
         },
         18: {
@@ -302,6 +340,7 @@ export const bankNews = {
             date: ' 1399/11/26',
             summary: '',
             imageUrl: '/assets/payamBankBasij.jpg',
+            images: [],
             view: 0
         }
     }

@@ -19,6 +19,19 @@ export const LogoContainer = styled(Logo)`
     width: 5em;
     height: 5em;
     padding: 1em 1em;
+
+    @keyframes appear {
+        0% {
+          letter-spacing: 1em;
+          filter: blur(12px);
+          opacity: 0;
+        }
+        100% {
+          filter: blur(0px);
+          opacity: 1;
+        }
+    }   
+    animation: appear 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 `;
 
 export const AppBarContainer = styled(({...props}) => <AppBar color='primary' position='static' {...props} />)`

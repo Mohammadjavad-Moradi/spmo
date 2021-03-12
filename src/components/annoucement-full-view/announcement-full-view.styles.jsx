@@ -78,6 +78,11 @@ export const Content = styled(({...props}) => <div {...props} />)`
     animation: 1s ease-in 0s fadein;
 `;
 
+export const ImagesContainer = styled.div`
+    width: 90%;
+    margin: 1em auto;
+`;
+
 export const DateContainer = styled(({...props}) => <div {...props} />)`
     padding: 1em;
     text-align: left;

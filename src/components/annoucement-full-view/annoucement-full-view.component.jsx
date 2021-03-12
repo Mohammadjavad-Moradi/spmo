@@ -3,10 +3,12 @@ import { connect } from 'react-redux';
 
 import { selectFullData } from '../../redux/announcements/announcements.selector';
 
+import ImagesSlideshow from '../images-slideshow/images-slideshow.component';
+
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-import { NewsContainer, NewsTitle, DividerContainer, MainImage, MainImageWrapper, Content, DateContainer } from  './announcement-full-view.styles';
+import { NewsContainer, NewsTitle, DividerContainer, MainImage, MainImageWrapper, Content, ImagesContainer, DateContainer } from  './announcement-full-view.styles';
 
 const AnnoucementFullView = ({ announcementData }) => {
 
@@ -25,6 +27,13 @@ const AnnoucementFullView = ({ announcementData }) => {
                 : null
             }
             <Content>{announcementData.content}</Content>
+            {
+                announcementData.images.length > 0 ?
+                <ImagesContainer>
+                    <ImagesSlideshow tileData={announcementData.images} />
+                </ImagesContainer>
+                : null
+            }
             <DateContainer>{announcementData.date}</DateContainer>
         </NewsContainer>
     )
