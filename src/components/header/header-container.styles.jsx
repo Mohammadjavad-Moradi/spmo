@@ -14,11 +14,18 @@ export const HeaderBar = styled.div`
     background-size: cover;
 `;
 
+export const HeaderBarMobile = styled.div`
+    width: 100%;
+    background: rgb(36,112,171);
+    background: linear-gradient(90deg, rgba(36,112,171,1) 0%, rgba(255,255,255,1) 0%, rgba(16,78,126,1) 0%, rgba(36,112,171,1) 40%, rgba(36,112,171,1) 60%, rgba(16,78,126,1) 100%);
 
-export const LogoContainer = styled(Logo)`
-    width: 5em;
-    height: 5em;
-    padding: 1em 1em;
+`;
+
+export const LogoContainer = styled(({...props}) => <Logo {...props} />)`
+    width: ${props => props.xs ? '2.5em' : '5em'};
+    height: ${props => props.xs ? '2.5em' : '5em'};
+    padding: ${props => props.xs ? '.2em 45%' : '1em 1em'};
+    margin: ${props => props.xs ? '0 auto' : '0'};
 
     @keyframes appear {
         0% {

@@ -14,11 +14,13 @@ import { HeaderBar,
     ToolBarContainer, 
     TabContainer, 
     TabsContainer, 
-    ProfileAndSearch 
+    ProfileAndSearch,
+    HeaderBarMobile 
 } from './header-container.styles';
 
 import Profile from '../profile/profile.component';
 import SwipeableTemporaryDrawer from '../swipeable-drawer/swipeable-drawer.component';
+import QuickLinksSlider from '../quick-links-slider/quick-links-slider.component';
 
 const HeaderContainer = ({ quickLinks }) => {
     
@@ -50,7 +52,7 @@ const HeaderContainer = ({ quickLinks }) => {
                 <Profile/>
                 { matchesMd ? <div></div> : null }                  
             </ProfileAndSearch> 
-
+            
             <TabsContainer value={value} onChange={handleChange}>
                 <SwipeableTemporaryDrawer/>
                 {
@@ -69,8 +71,12 @@ const HeaderContainer = ({ quickLinks }) => {
         <React.Fragment>
             {
                 matchesXs ?
-                null:
-                <HeaderBar>
+                <HeaderBarMobile>
+                    <Link to='/'>
+                        <LogoContainer xs={matchesXs} onClick={() => setValue(1)}/>
+                    </Link> 
+                </HeaderBarMobile>
+                : <HeaderBar>
                     <Link to='/'>
                         <LogoContainer onClick={() => setValue(1)}/>
                     </Link>
@@ -79,6 +85,9 @@ const HeaderContainer = ({ quickLinks }) => {
             <AppBarContainer >       
                 { tabs }
             </AppBarContainer>
+            {
+                matchesXs ? <QuickLinksSlider tileData={quickLinks} /> : null 
+            }
             {/* { matchesMd ? null : <DropdownTabContainer quickLinks={quickLinks}/>} */}
         </React.Fragment>
     )
