@@ -26,7 +26,7 @@ export const SlideWrapper = styled(({...props}) => <GridListTile {...props} />)`
 export const GridListContainer = styled(({...props}) => <GridList  {...props} />)`
     flex-wrap: nowrap !important;
     transform: translateZ(0);
-    height: 3em;
+    height: 3em !important;
     background: rgb(36,112,171);
     background: linear-gradient(90deg, rgba(36,112,171,1) 0%, rgba(255,255,255,1) 0%, rgba(16,78,126,1) 0%, rgba(36,112,171,1) 40%, rgba(36,112,171,1) 60%, rgba(16,78,126,1) 100%);
     li {
@@ -35,6 +35,11 @@ export const GridListContainer = styled(({...props}) => <GridList  {...props} />
     }
     
 `;
+
+export const GridListTileContainer = styled(GridListTile)`
+    height: 3em !important;
+`;
+
 
 export const LinkContainer = styled(Link)`
     width: 100px;

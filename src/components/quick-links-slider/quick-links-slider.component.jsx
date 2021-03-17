@@ -4,7 +4,7 @@ import GridListTile from '@material-ui/core/GridListTile';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-import { GridListContainer, SlideWrapper, LinkContainer } from './quick-links-slider.styles';
+import { GridListContainer, SlideWrapper, GridListTileContainer, LinkContainer } from './quick-links-slider.styles';
 
 
 
@@ -21,9 +21,9 @@ const QuickLinksSlider = ({ tileData }) => {
         <SlideWrapper>
             <GridListContainer>
                 {tileData.content.map((tile) => (
-                    <GridListTile key={tile.img}>
+                    <GridListTileContainer key={tile.img}>
                         <LinkContainer to={tile.linkUrl}>{tile.title}</LinkContainer>
-                    </GridListTile>
+                    </GridListTileContainer>
                 ))}
             </GridListContainer>
         </SlideWrapper>
