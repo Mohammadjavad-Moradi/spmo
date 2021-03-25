@@ -25,6 +25,7 @@ export const SlideWrapper = styled(({...props}) => <GridListTile {...props} />)`
 
 export const GridListContainer = styled(({...props}) => <GridList  {...props} />)`
     flex-wrap: nowrap !important;
+    flex-direction: row-reverse;
     transform: translateZ(0);
     height: 3em !important;
     background: rgb(36,112,171);
@@ -32,8 +33,7 @@ export const GridListContainer = styled(({...props}) => <GridList  {...props} />
     li {
         width: auto !important;
         line-height: 3em;
-    }
-    
+    }   
 `;
 
 export const GridListTileContainer = styled(GridListTile)`

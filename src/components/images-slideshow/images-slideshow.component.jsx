@@ -19,9 +19,9 @@ export default function ImagesSlideshow({ tileData }) {
 
     return (
         <SlideWrapper>
-            <GridListContainer cols={colsNum}>
-                {tileData.map((tile) => (
-                    <GridListTile key={tile.img}>
+            <GridListContainer cols={parseInt(colsNum)}>
+                {tileData.map((tile, index) => (
+                    <GridListTile key={index} >
                         <ImageWrapper src={tile.imageUrl} alt={tile.alt} />
                     </GridListTile>
                 ))}

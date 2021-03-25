@@ -1,7 +1,7 @@
 import { announcementsActionTypes } from './announcements.types';
 
 import { bankNews } from '../../components/data/news.data';
-const INITIAL_STATE = bankNews.official;
+const INITIAL_STATE = bankNews;
 
 const announcementsReducer = ( state = INITIAL_STATE, action ) => {
     switch (action.type) {

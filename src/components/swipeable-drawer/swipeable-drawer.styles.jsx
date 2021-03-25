@@ -43,9 +43,7 @@ export const BackButton = styled.div`
 
 export const FirstList = styled(({...props}) =>  <List {...props} />)`
     position: relative;
-    
     min-width: 100%;
-    //flex-grow: 1;
     right: ${props => !props.open ? '0' : '-110%'};
     transition: all ease 0.6s;
 
@@ -65,7 +63,6 @@ const openDrawers = (props) => {
 }
 
 const openSecondDrawer = (props) => {
-    //console.log(props)
     if(props.isopen && props.secondindexvalue === props.value) {
         return '0'
     } else {
@@ -76,7 +73,6 @@ const openSecondDrawer = (props) => {
 export const SecondList = styled(({...props}) => <List {...props} />)`
     position: absolute !important;
     width: ${props => props.open && props.indexvalue === props.value ? '240px' : '240px'} !important;
-    //min-width: ${props => props.open && props.indexvalue === props.value ? '250px' : '250px'} !important;
     visibility: ${props => props.open && props.indexvalue === props.value ? 'visible' : 'hidden' };
     right: ${props => openDrawers(props)};
     transition: right ease .6s;

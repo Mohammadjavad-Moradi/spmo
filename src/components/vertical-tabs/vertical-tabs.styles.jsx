@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -41,17 +40,14 @@ export const TabPanelContainer =  styled.div`
     animation: 1s ease-in 0s fadein;
 `;
 
-export const LinkContainer = styled(Link)`
+export const LinkContainer = styled.span`
     display: block;
     text-align: right;
     margin-top: 1em;
     padding-right: 1em;
     text-decoration: none;
     color: inherit;
-    &:visited {
-        text-decoration: none;
-        color: inherit;
-    }
+    cursor: pointer;
     &:first-child {
         margin-top: 0;
     }

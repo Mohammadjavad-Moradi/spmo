@@ -1,17 +1,13 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
-export const LinkContainer = styled(Link)`
+export const LinkContainer = styled.span`
     display: block;
     text-align: right;
     margin-top: 1em;
     padding-right: 1em;
     text-decoration: none;
     color: inherit;
-    &:visited {
-        text-decoration: none;
-        color: inherit;
-    }
+    cursor: pointer;
     &:hover {
         color: ${props => props.theme.palette.button.main};
     }

@@ -73,7 +73,7 @@ const HeaderContainer = ({ quickLinks }) => {
                 matchesXs ?
                 <HeaderBarMobile>
                     <Link to='/'>
-                        <LogoContainer xs={matchesXs} onClick={() => setValue(1)}/>
+                        <LogoContainer xs={matchesXs ? 'true' : undefined } onClick={() => setValue(1)}/>
                     </Link> 
                 </HeaderBarMobile>
                 : <HeaderBar>
@@ -88,7 +88,6 @@ const HeaderContainer = ({ quickLinks }) => {
             {
                 matchesXs ? <QuickLinksSlider tileData={quickLinks} /> : null 
             }
-            {/* { matchesMd ? null : <DropdownTabContainer quickLinks={quickLinks}/>} */}
         </React.Fragment>
     )
 }

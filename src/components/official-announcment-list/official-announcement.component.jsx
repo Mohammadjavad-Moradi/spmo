@@ -2,8 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-import { createStructuredSelector } from 'reselect';
-import { selectList } from '../../redux/announcements/announcements.selector';
+import { selectList, selectTitle } from '../../redux/announcements/announcements.selector';
 
 import { PageContainer, FullListWrapper, Wrapper, ItemContainer, ListItem, PageIndicator, SelectContainer, FormControlContainer } from './official-announcement.styles';
 import TitleContainer from '../title-container/title-container.component';
@@ -15,7 +14,7 @@ import FormControl from '@material-ui/core/FormControl';
 
 import { firestore } from '../../firebase/firebase.utils';
 
-const OfficialAnnouncement = ({annuoncementList, history, match}) => {
+const OfficialAnnouncement = ({annuoncementList, title, history, match}) => {
     const [ list ] = React.useState(annuoncementList);
     const [page, setPage] = React.useState(1);
     const [pageSize, setPageSize] = React.useState(10);
@@ -63,7 +62,7 @@ const OfficialAnnouncement = ({annuoncementList, history, match}) => {
 
     return (
         <PageContainer>
-            <TitleContainer name='اعلانات اداری' color='blue' />
+            <TitleContainer name={title} color='blue' />
             <Wrapper>
                 <FullListWrapper>
                     {
@@ -103,8 +102,9 @@ const OfficialAnnouncement = ({annuoncementList, history, match}) => {
     );
 };
 
-const mapStateToProps = createStructuredSelector({
-    annuoncementList: selectList
+const mapStateToProps = (state, ownProps) => ({
+    annuoncementList: selectList(ownProps.match.params.category)(state),
+    title: selectTitle(ownProps.match.params.category)(state)
 })
 
 export default withRouter(connect(mapStateToProps)(OfficialAnnouncement));

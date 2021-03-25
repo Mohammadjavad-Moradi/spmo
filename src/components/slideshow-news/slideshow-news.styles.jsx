@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from 'react-router-dom';
 
 import Grid from '@material-ui/core/Grid';
 import Carousel from 'react-material-ui-carousel';

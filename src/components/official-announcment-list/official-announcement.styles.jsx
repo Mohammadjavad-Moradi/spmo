@@ -6,9 +6,6 @@ import Select from '@material-ui/core/Select';
 
 export const PageContainer = styled(({...props}) => <div {...props}/>)`
     width: 100%;
-    
-
-   
 `;
 
 export const Wrapper = styled.div`

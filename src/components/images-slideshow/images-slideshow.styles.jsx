@@ -25,7 +25,6 @@ export const SlideWrapper = styled(({...props}) => <GridListTile {...props} />)`
 export const GridListContainer = styled(({...props}) => <GridList  {...props} />)`
     flex-wrap: nowrap !important;
     transform: translateZ(0);
-    
 `;
 
 export const ImageWrapper = styled.img`
