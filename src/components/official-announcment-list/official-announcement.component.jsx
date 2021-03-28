@@ -12,36 +12,35 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 
-import { firestore } from '../../firebase/firebase.utils';
+//import { firestore } from '../../firebase/firebase.utils';
 
 const OfficialAnnouncement = ({annuoncementList, title, history, match}) => {
-    const [ list ] = React.useState(annuoncementList);
     const [page, setPage] = React.useState(1);
     const [pageSize, setPageSize] = React.useState(10);
     
-    const pageCount = Math.ceil(list.length / pageSize);
+    const pageCount = Math.ceil(annuoncementList.length / pageSize);
 
-    React.useEffect(() => {
-        //let unSubscribeFromSnapshot = null
+    // React.useEffect(() => {
+    //     //let unSubscribeFromSnapshot = null
         
-        const fetchData = async () => {
-            const collectionRef = firestore.collection('/news/Y3tLkwHtnxD3Av6WxWnk/official');
+    //     const fetchData = async () => {
+    //         const collectionRef = firestore.collection('/news/Y3tLkwHtnxD3Av6WxWnk/official');
             
-            const ordered = collectionRef.orderBy('id', "desc").limit(3);
+    //         const ordered = collectionRef.orderBy('id', "desc").limit(3);
             
-            ordered.onSnapshot(async snapshot => {
+    //         ordered.onSnapshot(async snapshot => {
 
-                snapshot.docs.map(doc => {
-                    return console.log(doc.data())
-                })
-            });
-        } 
-        fetchData();
+    //             snapshot.docs.map(doc => {
+    //                 return console.log(doc.data())
+    //             })
+    //         });
+    //     } 
+    //     fetchData();
 
-        // return function cleanUp() {
-        //     unSubscribeFromSnapshot();
-        // }    
-    },[])
+    //     // return function cleanUp() {
+    //     //     unSubscribeFromSnapshot();
+    //     // }    
+    // },[])
 
 
     const handleClick = (id) => {
@@ -66,7 +65,7 @@ const OfficialAnnouncement = ({annuoncementList, title, history, match}) => {
             <Wrapper>
                 <FullListWrapper>
                     {
-                        pagination(list, page, pageSize).map((item, index) => (
+                        pagination(annuoncementList, page, pageSize).map((item, index) => (
                             <React.Fragment key={index}>
                                 <ItemContainer >
                                     <ListItem onClick={() => handleClick(item.id) } title={'true'} >{item.title}</ListItem>

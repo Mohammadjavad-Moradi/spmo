@@ -5,7 +5,7 @@ import OfficialAnnouncement from '../../components/official-announcment-list/off
 import AnnoucementFullView from '../../components/annoucement-full-view/annoucement-full-view.component';
 
 const Announcements = ({ match }) => {
-    
+    console.log(`announcement`)
     return (
         <React.Fragment>
             <Route exact path={`${match.path}`} component={OfficialAnnouncement}/>

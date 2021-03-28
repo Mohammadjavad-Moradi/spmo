@@ -1,7 +1,7 @@
 export const bankNews = {
     official: {
         title: 'اعلانات اداری',
-        linkUrl: '/official',
+        linkUrl: '/announcements/official',
         content: {
             1: {
                 id: 1,
@@ -350,7 +350,7 @@ export const bankNews = {
     },
     occasional: {
         title: 'اعلانات مناسبتی',
-        linkUrl: '/occasional',
+        linkUrl: '/announcements/occasional',
         content: {
             1: {
                 id: 1,
@@ -699,7 +699,7 @@ export const bankNews = {
     },
     covid: {
         title: 'اخبار کرونا',
-        linkUrl: '/covid',
+        linkUrl: '/announcements/covid',
         content: {
             1: {
                 id: 1,
@@ -1048,7 +1048,7 @@ export const bankNews = {
     },
     special: {
             title: 'اعلانات ویژه',
-            linkUrl: '/special',
+            linkUrl: '/announcements/special',
             content: {
                 1: {
                     id: 1,

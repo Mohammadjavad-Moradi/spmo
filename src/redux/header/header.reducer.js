@@ -45,11 +45,15 @@ const INITIAL_STATE = {
                 },
                 {
                     name: 'اعلانات اداری',
-                    linkUrl: '/officialannouncement'
+                    linkUrl: '/announcements/official'
                 },
                 {
                     name: 'اعلانات مناسبتی',
-                    linkUrl: '/monasebati'
+                    linkUrl: '/announcements/occasional'
+                },
+                {
+                    name: 'اخبار کرونا',
+                    linkUrl: '/announcements/covid'
                 },
                 {
                     name: 'اخبار پولی',

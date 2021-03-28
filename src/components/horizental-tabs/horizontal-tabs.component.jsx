@@ -12,16 +12,18 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
-import { LinkContainer, TitleContainer } from './horizontal-tabs.styles';
+import { LinkContainer, TitleContainer, TabPanelContainer } from './horizontal-tabs.styles';
 
 import { createStructuredSelector } from 'reselect';
 import { selectTitles, selectLinkUrls, selectPreviews } from '../../redux/announcements/announcements.selector';
+
+import CustomButton from '../custom-button/custom-button.component';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
     return (
-        <div
+        <TabPanelContainer
             role="tabpanel"
             hidden={value !== index}
             id={`full-width-tabpanel-${index}`}
@@ -33,7 +35,7 @@ function TabPanel(props) {
                     <Typography>{children}</Typography>
                 </Box>
             )}
-        </div>
+        </TabPanelContainer>
     );
 }
 
@@ -98,6 +100,7 @@ const HorizontalTabs = ({ title, linkUrl, preview, history }) => {
                                     <LinkContainer key={id} onClick={() => history.push(`${linkUrl[i]}/${item.id}`)}>{item.title}</LinkContainer>
                                 ))
                             }
+                            <CustomButton variant='contained' color='secondary' component='link' to={linkUrl[i]} >ادامه مطلب</CustomButton>
                         </TabPanel>
                     ))
                 }

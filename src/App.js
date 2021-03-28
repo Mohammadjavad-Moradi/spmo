@@ -52,8 +52,7 @@ function App ({ currentUser, setCurrentUser }) {
           <PageContainer>
             <Switch>
               <Route exact path='/' component={HomePage} />
-              {/* <Route path='/news' component={NewsPage} /> */}
-              <Route path='/:category' component={Announcements} />
+              <Route path='/announcements/:category' component={Announcements} />
               <Route exact path='/signin' render={() => currentUser ? (<Redirect to='/' />) : (<SignInPage/>) } />
             </Switch>
           </PageContainer>

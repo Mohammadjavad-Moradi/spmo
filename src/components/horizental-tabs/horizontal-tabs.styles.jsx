@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const LinkContainer = styled.span`
     display: block;
     text-align: right;
-    margin-top: 1em;
+    margin: 1em 0;
     padding-right: 1em;
     text-decoration: none;
     color: inherit;
@@ -24,4 +24,8 @@ export const TitleContainer = styled.div`
     span {
         padding: 1em;
     }
+`;
+
+export const TabPanelContainer = styled.div`
+
 `;
