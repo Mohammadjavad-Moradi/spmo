@@ -42,7 +42,7 @@ function App ({ currentUser, setCurrentUser }) {
     return function cleanUp() {
       unSubscribeFromAuth();
     }    
-  },[])
+  },[currentUser])
 
   return (
     <MaterialThemeProvider theme={theme}>
