@@ -31,6 +31,10 @@ const INITIAL_STATE = {
             {
                 title: 'کانون بازنشستگان',
                 linkUrl: '/bazneshaste'
+            },
+            {
+                title: 'نمودار سازمانی',
+                linkUrl: '/chartbuilder'
             }
         ]
     },

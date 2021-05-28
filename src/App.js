@@ -13,6 +13,7 @@ import Announcements from './pages/announcements/announcements.component';
 import HeaderContainer from './components/header/header-container.component';
 import HomePage from './pages/homepage/homepage.component';
 import SignInPage from './pages/sign-in-page/sign-in-page.component';
+import OrgChart from './pages/org-chart/org-chart-page.component';
 import { auth, createUserProfile } from './firebase/firebase.utils';
 import Footer from './components/footer/footer.component';
 
@@ -54,6 +55,7 @@ function App ({ currentUser, setCurrentUser }) {
               <Route exact path='/' component={HomePage} />
               <Route path='/announcements/:category' component={Announcements} />
               <Route exact path='/signin' render={() => currentUser ? (<Redirect to='/' />) : (<SignInPage/>) } />
+              <Route path='/chartbuilder' component={OrgChart} />
             </Switch>
           </PageContainer>
           <Footer />

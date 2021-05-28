@@ -33,7 +33,7 @@ export const selectPreviews= createSelector(
     [selectAnnouncements],
     announcements => {
         const contents = Object.keys(announcements).map(key => announcements[key].content)
-        return contents.map(item => Object.keys(item).map(key => item[key]).slice(0, 10))
+        return contents.map(item => Object.keys(item).map(key => item[key]).slice(0, 5))
     }
 );
 
