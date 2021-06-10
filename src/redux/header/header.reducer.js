@@ -9,28 +9,8 @@ const INITIAL_STATE = {
                 linkUrl: '/'
             },
             {
-                title: 'اخبار پولی و بانکی',
-                linkUrl: '/akhbarpoli'
-            },
-            {
-                title: 'نظرها وپیام ها',
-                linkUrl: '/nazarvapayam'
-            },
-            {
-                title: 'اداره باشگاه',
-                linkUrl: '/edarebashgah'
-            },
-            {
-                title: 'اداره رفاه',
-                linkUrl: '/edarerefah'
-            },
-            {
-                title: 'بسیج',
-                linkUrl: '/basij'
-            },
-            {
-                title: 'کانون بازنشستگان',
-                linkUrl: '/bazneshaste'
+                title: 'نمودار ها',
+                linkUrl: '/recharts'
             },
             {
                 title: 'نمودار سازمانی',

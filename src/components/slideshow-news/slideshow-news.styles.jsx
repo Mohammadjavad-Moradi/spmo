@@ -19,7 +19,7 @@ export const SlideItem = styled(({ ...props }) => <Grid container direction='col
   min-height: 250px;
 `;
 
-export const GridItemTitle = styled(({ ...props }) => <Grid item {...props} />)`
+export const GridItemTitle = styled(({ ...props }) => <Grid item  {...props} />)`
   cursor: pointer;
   font-weight: bold;
   line-height: 2em;
