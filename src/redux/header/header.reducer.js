@@ -15,6 +15,18 @@ const INITIAL_STATE = {
             {
                 title: 'نمودار سازمانی',
                 linkUrl: '/chartbuilder'
+            },
+            {
+                title: 'پیام ها و نظر ها',
+                linkUrl: '/comments'
+            },
+            {
+                title: 'اداره باشگاه',
+                linkUrl: '/bashgah'
+            },
+            {
+                title: 'منابع انسانی',
+                linkUrl: '/hr'
             }
         ]
     },
