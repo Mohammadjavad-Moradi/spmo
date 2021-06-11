@@ -15,6 +15,7 @@ import HomePage from './pages/homepage/homepage.component';
 import SignInPage from './pages/sign-in-page/sign-in-page.component';
 import OrgChart from './pages/org-chart/org-chart-page.component';
 import Recharts from './pages/recharts/recharts.components';
+import UnderConstruction from './pages/under-construction/under-construction.component';
 import { auth, createUserProfile } from './firebase/firebase.utils';
 import Footer from './components/footer/footer.component';
 
@@ -58,6 +59,9 @@ function App ({ currentUser, setCurrentUser }) {
               <Route exact path='/signin' render={() => currentUser ? (<Redirect to='/' />) : (<SignInPage/>) } />
               <Route path='/chartbuilder' component={OrgChart} />
               <Route path='/recharts' component={Recharts} />
+              <Route path='/comments' component={UnderConstruction} />
+              <Route path='/bashgah' component={UnderConstruction} />
+              <Route path='/hr' component={UnderConstruction} />
             </Switch>
           </PageContainer>
           <Footer />
