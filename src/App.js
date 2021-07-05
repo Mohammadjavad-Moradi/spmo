@@ -15,6 +15,7 @@ import HomePage from './pages/homepage/homepage.component';
 import SignInPage from './pages/sign-in-page/sign-in-page.component';
 import OrgChart from './pages/org-chart/org-chart-page.component';
 import Recharts from './pages/recharts/recharts.components';
+import SpmoSectionTabs from './components/spmo-section-tabs/spmo-section-tabs.components';
 import UnderConstruction from './pages/under-construction/under-construction.component';
 import { auth, createUserProfile } from './firebase/firebase.utils';
 import Footer from './components/footer/footer.component';
@@ -62,6 +63,7 @@ function App ({ currentUser, setCurrentUser }) {
               <Route path='/comments' component={UnderConstruction} />
               <Route path='/bashgah' component={UnderConstruction} />
               <Route path='/hr' component={UnderConstruction} />
+              <Route path='/securityprinting' component={SpmoSectionTabs} />
             </Switch>
           </PageContainer>
           <Footer />

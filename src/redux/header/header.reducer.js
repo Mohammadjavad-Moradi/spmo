@@ -27,7 +27,12 @@ const INITIAL_STATE = {
             {
                 title: 'منابع انسانی',
                 linkUrl: '/hr'
+            },
+            {
+                title: 'معاونت تولید',
+                linkUrl: '/securityprinting'
             }
+            
         ]
     },
     tabItemsData: [

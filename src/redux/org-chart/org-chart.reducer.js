@@ -24,13 +24,6 @@ const INITIAL = {
                 children: []         
             },
             2: {
-                address: [1],
-                name: 'child 2',
-                title: 'title 2',
-                supervisees: 0,
-                children: []         
-            },
-            3: {
                 address: [0],
                 name: 'اقای اذرمهر',
                 title: 'معاون تولید',
@@ -48,13 +41,7 @@ const INITIAL = {
                                 title: 'رییس دایره بازبینی',
                                 supervisees: 1,
                                 children: {
-                                    0: {
-                                        address: [1],
-                                        name: 'اقای مرادی',
-                                        title: 'اپراتور بازبینی',
-                                        supervisees: 0,
-                                        children: []         
-                                    }
+                                    
                                 }         
                             },
                             1: {
@@ -88,20 +75,6 @@ const INITIAL = {
                         children: []         
                     }
                 }         
-            },
-            4: {
-                address: [1],
-                name: 'child 2',
-                title: 'title 2',
-                supervisees: 0,
-                children: []         
-            },
-            5: {
-                address: [1],
-                name: 'child 2',
-                title: 'title 2',
-                supervisees: 0,
-                children: []         
             }
         }
     }
