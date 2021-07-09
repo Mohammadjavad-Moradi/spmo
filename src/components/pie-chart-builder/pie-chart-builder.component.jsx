@@ -3,7 +3,7 @@ import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
 
 import { PieChartContainer, Label } from './pie-chart-builder.styles';
 
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#96a88e', '#FF8042'];
 
 const RADIAN = Math.PI / 180;
 const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
@@ -12,33 +12,32 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
   const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
   return (
-    <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
+    <text x={x} y={y} fill="black" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
       {`${(percent * 100).toFixed(0)}%`}
     </text>
   );
 };
 
-const PieChartBuilder = ({details, name}) => {
+const PieChartBuilder = ({chartData}) => {
     return (
         <React.Fragment>
             <PieChartContainer>  
-                <PieChart width={400} height={400} position="outside">
+                <PieChart width={250} height={250} >
                 <Pie
-                    data={details}
+                    data={chartData}
                     cx="50%"
                     cy="50%"
                     labelLine={false}
                     label={renderCustomizedLabel}
-                    outerRadius={80}
+                    outerRadius={100}
                     fill="#8884d8"
                     dataKey="value"        
                 >
-                    {details.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                    {chartData.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}/>
                     ))}
                 </Pie>
                 </PieChart>
-                <Label>شماره قفسه:{name}</Label>
             </PieChartContainer>
         </React.Fragment>
     );

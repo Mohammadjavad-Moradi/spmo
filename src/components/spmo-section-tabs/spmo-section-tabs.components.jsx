@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
 
-import Offset from '../offset/offset.component';
+import ReviewSection from '../review-section/review-section.component';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -68,7 +68,7 @@ const SpmoSectionTabs = () => {
             }
             </TabsContainer>
         <TabPanel value={value} index={0}>
-            <Offset/>
+           offset 
         </TabPanel>
         <TabPanel value={value} index={1}>
             Item Two
@@ -77,7 +77,7 @@ const SpmoSectionTabs = () => {
             Item Three
         </TabPanel>
         <TabPanel value={value} index={3}>
-            Item Four
+          <ReviewSection/>
         </TabPanel>
         <TabPanel value={value} index={4}>
             Item Five

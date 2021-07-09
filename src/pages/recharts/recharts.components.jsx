@@ -121,10 +121,6 @@ const Recharts = () => {
         <Line name="خروجی بازبینی" type="monotone" dataKey="uv" stroke="#8884d8" activeDot={{ r: 8 }} />
         <Line name="برنامه تولید" type="monotone" dataKey="pv" stroke="#82ca9d" />
       </LineChart>
-      <PieChart width={400} height={400}>
-          <Pie data={data01} dataKey="value" cx="50%" cy="50%" outerRadius={60} fill="#8884d8" />
-          <Pie data={data02} dataKey="value" cx="50%" cy="50%" innerRadius={70} outerRadius={90} fill="#82ca9d" label />
-      </PieChart>
       <BarChart
           width={500}
           height={300}
@@ -145,7 +141,6 @@ const Recharts = () => {
           <Bar name="مرخصی کرونا" dataKey="uv" stackId="a" fill="#82ca9d" />
         </BarChart>
     </RechartsContainer>
-  
   );
 }
 

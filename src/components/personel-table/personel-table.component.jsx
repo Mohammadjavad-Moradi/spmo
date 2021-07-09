@@ -14,16 +14,15 @@ const useStyles = makeStyles({
   },
 });
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
+function createData(name, machineHead, ink1, ink2, feeder1, feeder2) {
+  return { name, machineHead, ink1, ink2, feeder1, feeder2 };
 }
 
 const rows = [
-  createData('مجتبی سپهرکیا','مسئول ماشین', 14,),
-  createData('رسول زمانی', 'مسئول مرکب', 9,),
-  createData('محمد بیدی', 'مسئول مرکب', 17, ),
-  createData('علیرضا مهمانلی', 'مسئول آپارات', 9, ),
-  createData('مجید مبصری', 'کمک آپارات', 16, ),
+  createData(170, 'Machine Head', 'Ink man 1', 'Ink man 2', 'Feeder man', 'feeder man 2'),
+  createData(171, 'Machine Head', 'Ink man 1', 'Ink man 2', 'Feeder man', 'feeder man 2'),
+  createData(172, 'Machine Head', 'Ink man 1', 'Ink man 2', 'Feeder man', 'feeder man 2'),
+  createData(173, 'Machine Head', 'Ink man 1', 'Ink man 2', 'Feeder man', 'feeder man 2'),
 ];
 
 export default function BasicTable() {
@@ -34,9 +33,12 @@ export default function BasicTable() {
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>نام و نام خانوادگی</TableCell>
-            <TableCell align="right">سمت</TableCell>
-            <TableCell align="right">سابقه کار</TableCell>
+            <TableCell>شماره قفسه</TableCell>
+            <TableCell align="right">مسئول ماشین</TableCell>
+            <TableCell align="right">مسئول مرکب</TableCell>
+            <TableCell align="right">مسئول مرکب</TableCell>
+            <TableCell align="right">مسئول آپارات</TableCell>
+            <TableCell align="right">کمک آپارات</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -45,10 +47,11 @@ export default function BasicTable() {
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
+              <TableCell align="right">{row.machineHead}</TableCell>
+              <TableCell align="right">{row.ink1}</TableCell>
+              <TableCell align="right">{row.ink2}</TableCell>
+              <TableCell align="right">{row.feeder1}</TableCell>
+              <TableCell align="right">{row.feeder2}</TableCell>
             </TableRow>
           ))}
         </TableBody>
