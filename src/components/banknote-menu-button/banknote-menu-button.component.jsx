@@ -30,10 +30,10 @@ const BanknoteMenuBotton = ({ types, setTitleToShow }) => {
         if (anchorRef.current && anchorRef.current.contains(event.target)) {
         return;
         }
-        setTitleToShow({
-            title: event.target.attributes.value.value,
-            titleIndex: parseInt(event.target.attributes.index.value) 
-        })
+          setTitleToShow({
+              title: event.target.attributes.value.value,
+              titleIndex: parseInt(event.target.attributes.index.value) 
+          })          
     setOpen(false);
   };
 
