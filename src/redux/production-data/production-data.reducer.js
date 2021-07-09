@@ -426,27 +426,27 @@ const INITIAL_STATE = {
                     data: [
                         {
                             name: 'مجموع اوراق',
-                            count: 82000
+                            count: 65000
                         },
                         {
                             name: 'برحسب نفرات',
-                            count: 75000
+                            count: 57000
                         },
                         {
                             name: 'سالم',
-                            count: 74000
+                            count: 60537
                         },
                         {
                             name: 'نیمه سالم',
-                            count: 6500
+                            count: 1557
                         },
                         {
                             name: 'ناسالم',
-                            count: 1500
+                            count: 406
                         },
                         {
                             name: 'ضایعات ماشین',
-                            count: 1500
+                            count: 2500
                         }
                     ]
                 },
@@ -484,27 +484,27 @@ const INITIAL_STATE = {
                     data: [
                         {
                             name: 'مجموع اوراق',
-                            count: 82000
+                            count: 105000
                         },
                         {
                             name: 'برحسب نفرات',
-                            count: 75000
+                            count: 93000
                         },
                         {
                             name: 'سالم',
-                            count: 74000
+                            count: 95937
                         },
                         {
                             name: 'نیمه سالم',
-                            count: 6500
+                            count: 5462
                         },
                         {
                             name: 'ناسالم',
-                            count: 1500
+                            count: 1101
                         },
                         {
                             name: 'ضایعات ماشین',
-                            count: 1500
+                            count: 2500
                         }
                     ]
                 }
@@ -512,15 +512,15 @@ const INITIAL_STATE = {
             personnel: [
                 {
                     name: 'present',
-                    value: 24 
+                    value: 25 
                 },
                 {
                     name: 'covid',
-                    value: 8 
+                    value: 7 
                 },
                 {
                     name: 'off',
-                    value: 3 
+                    value: 2 
                 }
             ]
             

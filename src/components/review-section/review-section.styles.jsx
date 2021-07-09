@@ -6,6 +6,7 @@ import Divider from '@material-ui/core/Divider';
 export const OffsetContainer = styled.div`
     width: 100%;
     padding: 0;
+    overflow: auto;
 `;
 
 export const TabsContainer = styled(({ ...props }) => <Tabs variant="scrollable" indicatorColor='primary' textColor="primary" {...props} />)`
@@ -16,11 +17,11 @@ export const DividerContainer = styled(({...props}) => <Divider variant='middle'
 
     @keyframes moveindivider {
         0% {
-            transform: translateX(100%);
+            transform: opacity(0);
         }
 
         100% {
-            transform: translateX(0%);
+            transform: opacity(1);
         }
     }
 

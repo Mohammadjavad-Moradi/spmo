@@ -7,6 +7,6 @@ export const ChooseButton = styled(({...props}) => <Button variant='contained' c
 `;
 
 export const ChooseButtonContainer = styled.div`
-    margin: 2em auto;
+    margin: 1em auto 3.5em;
     text-align: center;
 `;

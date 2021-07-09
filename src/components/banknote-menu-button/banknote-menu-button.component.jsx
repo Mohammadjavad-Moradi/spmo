@@ -16,27 +16,32 @@ import { ChooseButtonContainer } from './banknote-menu-button.styles';
 
 
 const BanknoteMenuBotton = ({ types, setTitleToShow }) => {
-    console.log(types)
-    const [open, setOpen] = React.useState(false);
-    const anchorRef = React.useRef(null);
+  console.log(types)
+  const [open, setOpen] = React.useState(false);
+  const anchorRef = React.useRef(null);
+  
+  const typesArr = Object.keys(types).map(key => types[key].name);
+  
+  const handleToggle = () => {
+      setOpen((prevOpen) => !prevOpen);
+  };
+  
+  
+  const handleClose = (event) => {
+    if (anchorRef.current && anchorRef.current.contains(event.target)) {
+      return;
+    }
     
-    const typesArr = Object.keys(types).map(key => types[key].name);
-    
-    const handleToggle = () => {
-        setOpen((prevOpen) => !prevOpen);
-    };
-
-    const handleClose = (event) => {
-        if (anchorRef.current && anchorRef.current.contains(event.target)) {
-        return;
-        }
-          setTitleToShow({
-              title: event.target.attributes.value.value,
-              titleIndex: parseInt(event.target.attributes.index.value) 
-          })          
     setOpen(false);
   };
-
+    
+  const menuClicked = (event) => {
+    handleClose(event);
+    setTitleToShow({
+      title: event.target.attributes.value.value,
+      titleIndex: parseInt(event.target.attributes.index.value) 
+    })
+  }
   function handleListKeyDown(event) {
     if (event.key === 'Tab') {
       event.preventDefault();
@@ -80,7 +85,7 @@ const BanknoteMenuBotton = ({ types, setTitleToShow }) => {
                   <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
                     {
                         typesArr.map((type, index) => (
-                            <MenuItem onClick={handleClose} key={index} value={type} index={index}>{type}</MenuItem>
+                            <MenuItem onClick={menuClicked} key={index} value={type} index={index}>{type}</MenuItem>
                         ))
                     }
                   </MenuList>
