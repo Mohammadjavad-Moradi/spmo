@@ -1,5 +1,5 @@
-import React, { PureComponent } from 'react';
-import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
+import React from 'react';
+import { PieChart, Pie, Sector, Cell, Tooltip } from 'recharts';
 
 import { PieChartContainer, Label } from './pie-chart-builder.styles';
 
@@ -29,6 +29,8 @@ const PieChartBuilder = ({chartData}) => {
                     cy="50%"
                     labelLine={false}
                     label={renderCustomizedLabel}
+                    paddingAngle={5}
+                    innerRadius={40}
                     outerRadius={100}
                     fill="#8884d8"
                     dataKey="value"        
@@ -37,6 +39,7 @@ const PieChartBuilder = ({chartData}) => {
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}/>
                     ))}
                 </Pie>
+                <Tooltip />
                 </PieChart>
             </PieChartContainer>
         </React.Fragment>

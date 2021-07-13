@@ -1,5 +1,5 @@
 import React from 'react';
-import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
+import { PieChart, Pie, Sector, Cell, Tooltip } from 'recharts';
 
 import { Label, PieChartContainer } from './pie-chart-half-circle.styles';
 
@@ -31,6 +31,7 @@ const PieChartHalfCircle = ({details, name}) => {
                             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                         ))}
                     </Pie>
+                    <Tooltip />
                 </PieChart>
                 <Label>شماره قفسه:{name}</Label>
             </PieChartContainer>          

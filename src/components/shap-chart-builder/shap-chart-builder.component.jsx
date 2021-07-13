@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
 import { scaleOrdinal } from 'd3-scale';
 import { schemeCategory10 } from 'd3-scale-chromatic';
 
@@ -43,7 +43,7 @@ const ShapChartBuilder = ({chartData}) => {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" minTickGap={5} tickSize={6}/>
           <YAxis />
-          <Bar dataKey="count" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
+          <Bar dataKey="count" barSize={50} fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
             {chartData.map((entry, index) => (
               <Cell key={`cell-${index}`} fill={colors[index % 20]} />
             ))}
