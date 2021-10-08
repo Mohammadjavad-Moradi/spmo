@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This is a demo of CBI projects 
+https://spmo.herokuapp.com/
+you can see chart builders on معاونت تولید tab > بازبینی
+
+
 ## Available Scripts
 
 In the project directory, you can run:
